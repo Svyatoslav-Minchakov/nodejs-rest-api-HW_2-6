@@ -1,8 +1,7 @@
 const app = require("./app");
 const mongoose = require("mongoose");
 
-const DB_HOST =
-  "mongodb+srv://Svyatoslav:99887766@cluster0.9aeffpx.mongodb.net/contacts_reader";
+const { DB_HOST } = process.env;
 
 mongoose
   .connect(DB_HOST)

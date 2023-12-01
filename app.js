@@ -1,10 +1,14 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
-
 const contactsRouter = require("./routes/api/contacts");
+const dotenv = require("dotenv");
 
 const app = express();
+
+dotenv.config();
+
+console.log(process.env.DB_HOST);
 
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 
