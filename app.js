@@ -8,8 +8,6 @@ const app = express();
 
 dotenv.config();
 
-console.log(process.env.DB_HOST);
-
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 
 app.use(logger(formatsLogger));
